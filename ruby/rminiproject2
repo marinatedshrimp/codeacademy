@@ -1,0 +1,26 @@
+#HISTOGRAM TIME BITCHES
+
+puts "Type somthing and I'll count it for you: "
+
+text = gets.chomp
+words = text.split
+frequencies = Hash.new(0)
+#(0)means that the key's value will always start with 0
+
+words.each{ |word|
+  frequencies[word] += 1
+}
+
+frequency = frequencies.sort_by do
+  |thing, count|
+  something
+end
+
+frequency.reverse!
+#sort_by sorts it in order from small to big so we
+#make it sort from big to small by doing .reverse!
+
+frequency.each{ |word,count|
+  puts word + " " + count.to_s
+}
+#to_s converts the integer into a string

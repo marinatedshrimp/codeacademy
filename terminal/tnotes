@@ -1,0 +1,49 @@
+<!--CREATE A FILE-->
+touch file_name
+
+<!--EDIT NEW FILE-->
+vim file_name
+
+<!--READ/INSERT MODE IN FILE-->
+i - insert mode
+esc key - read mode(cannot edit file)
+esc key -> :wq - save and exit file
+
+<!--RUN PYTHON FILE-->
+python(3) filename.py
+
+
+<!--MAKE A DIRECTORY-->
+mkdir directory_name
+
+<!--MOVE A FILE TO ANOTHER DIRECTORY-->
+mv file_to_move directory_name
+
+<!--RENAME A FILE-->
+mv file_name new_file_name
+
+<!--COPY FILE-->
+cp file_to_copy new_file_name
+
+<!--COPY DIRECTORY-->
+cp -r dir_to_copy new_dir_name
+
+<!--REMOVE FILE-->
+rm file_name
+
+<!--REMOVE DIRECTORY-->
+rm -r dir_name
+
+<!--GO TO PREVIOUS DIRECTORY-->
+cd ..
+
+<!--GO TO HOME DIRECTORY-->
+cd
+
+<!--TAKES YOU FROM JAVA TO DOCUMENTS SKIPS CODEACADEMY-->
+cd -
+
+cd = change directory
+
+<!--CHECK CURRENT LOCATION WITHIN PC-->
+pwd (aka present working directory)

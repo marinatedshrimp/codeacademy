@@ -1,0 +1,53 @@
+edges connect nodes and if the edge is pointing from a to b,
+b is a's neighbor but a is not c's neightbor
+
+adjacency list
+
+python: dict
+key: node value: neighbors
+{
+a : [b,c],
+b: [d],
+d: [],
+e: [e],
+f: [d],
+}
+
+depth first traversal
+    if you go from a to b, you have to go to d first and reach a 
+    dead end before going to a node like c because you need to go deeper first
+    that is earlier than d
+    a - b - d
+    if in a random graph, if you start in one direction, you have to go 
+    in that same direction until a dead end
+    uses STACK
+        pretend we have the same graph as avobe but d:[f]
+        if starting at a, push a onto the stack. Then we must
+        consider the neightbors(c, b) and push them both on the stack.
+        before pushing the two letters, pop a and a becomes the current.
+        once popping b and pushing d onto the stack, the d goes on top of c,
+        which btw is still there on the stack since we haven't explored
+        any nodes further along the c route.
+        Pop top of stack(d) and make it ur current. Then see its 
+        neightbor(f)and push that onto the top of the stack above c.
+        Now we pop f and make it our current but there is no subsequent node
+        so nothing gets pushes on top of c.
+        We then popo the top item in out stack(c) and push e onto top of stack
+        pop e and make it the current and there is nothing to be pushed.
+        printed: a,b,d,f,c,e
+
+        
+
+
+breadth first traversal
+    a - b
+    in a random graph, you must explore all the immedate nodes around
+    it before going any deeper
+    it explores all directions evenly rather than one direction 
+    uses QUEUE
+    push a onto queue. pop a then push b to queue first then c onto
+    the back of queue. pop b because its first and push d onto BACK of 
+    key so that the next current is c. push e onto back of stack behind queue
+    pop e from queue and since there is no neighbor, pop f and that's it.
+
+

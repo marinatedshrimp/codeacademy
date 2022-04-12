@@ -1,0 +1,116 @@
+/*this is used for
+multiline comments*/
+
+//this is for single-line comments
+
+//---LET MAKES A CHANGEABLE VARIABLE---//
+let name = "marina"
+
+//---CONST MAKES AN UNCHANGEABLE VARIABLE---//
+const falsyName = 0
+
+/* "||" means or so when name has a falsy value
+it adopts the following value*/
+newname = falsyName || "regina"
+
+//FALSY VALUES: empty strings, 0, NaN, etc.//
+
+name === "marina" ?
+  console.log("nice name");
+  console.log("you should change your name to marina");
+
+if(name === "marina"){
+  console.log("nice")
+}else if(name === "erica"){
+  console.log("change your name to marina")
+}else if(name === "alisa"){
+  console.log("oh it's not arisa?")
+}else{
+  console.log("ew")
+}
+
+//the following is the same thing but probably easier to write out//
+
+switch (name) {
+  case "marina":
+    console.log("nice");
+    break;
+  case "erica":
+    console.log("not as nice");
+    break;
+  case "alisa":
+    console.log("nope");
+    break;
+  default:
+    console.log("ew");
+    break;
+}
+
+//---INTERPOLATION---//
+
+function Thanks(name = "poopoo"){
+  console.log(`Why thank you very much ${name}!!`);
+}
+Thanks("Mr. Potato Head");
+//make sure to use backticks or else it won't work//
+//putting a value in the fucntion vreates a default  parameter//
+
+/ functions but better /
+
+//---IF/ELSE IN A FUNCTION---//
+const waterPlant function(day){
+  if(day === 'Wednesday'){
+    return true;
+  }else{
+    return false;
+  };
+};
+console.log(waterPlant("Tuesday"));
+
+//---ARROW HACK + CONCISE IF CONDITIONS---//
+//functions with one parameter don't need parenthses//
+const waterPlant = day => day === "Wednesday"? true : false;
+console.log(waterPlant("Tuesday"));
+
+const sum = (num1, num2) => {
+  area = num1 + num2;
+  return area;
+};
+
+//---GLOBAL VARIABLES AND INTERPOLATION---//
+const satellite = "The Moon";
+const galaxy = "The Milky Way";
+const stars = "North Star";
+
+const callMyNightSky = () => {
+  return `Night Sky: ${satellite}, ${stars}, and ${galaxy}`;
+};
+console.log(callMyNightSky());
+
+//---SSCOPE POLLUTION---//
+
+/*if we don't use let inside the block,
+it will just replace the value of the variable*/
+let num = 50;
+
+const logNum = () => {
+  num = 100; // Take note of this line of code
+  console.log(num);
+};
+
+logNum(); // Prints 100
+console.log(num); // Prints 100
+
+//creating a new variable with the same name is fine
+let num = 50;
+
+const logNum = () => {
+  let num = 100; // Take note of this line of code
+  console.log(num);
+};
+
+logNum(); // Prints 100
+console.log(num); // Prints 50
+
+/*but too doing that too much will just casue confusion
+so just chill and use some block variables*/
